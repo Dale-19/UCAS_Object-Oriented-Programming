@@ -26,11 +26,13 @@ CONFIG += c++11
 
 SOURCES += \
         editwindow.cpp \
+        filemenu.cpp \
         main.cpp \
         mainwindow.cpp
 
 HEADERS += \
         editwindow.h \
+        filemenu.h \
         mainwindow.h
 
 FORMS += \

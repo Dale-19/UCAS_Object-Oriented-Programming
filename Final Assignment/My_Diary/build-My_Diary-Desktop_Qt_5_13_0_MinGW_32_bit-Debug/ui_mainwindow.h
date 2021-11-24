@@ -12,6 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QCalendarWidget>
+#include <QtWidgets/QListWidget>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
@@ -25,10 +26,11 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralWidget;
-    QPushButton *pushButton;
+    QPushButton *pushButton_new;
     QCalendarWidget *calendarWidget;
-    QPushButton *pushButton_2;
-    QPushButton *pushButton_3;
+    QPushButton *pushButton_delete;
+    QPushButton *pushButton_search;
+    QListWidget *listWidget;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -37,29 +39,35 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(873, 498);
+        MainWindow->resize(870, 500);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
-        pushButton = new QPushButton(centralWidget);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(550, 260, 141, 61));
+        pushButton_new = new QPushButton(centralWidget);
+        pushButton_new->setObjectName(QString::fromUtf8("pushButton_new"));
+        pushButton_new->setGeometry(QRect(550, 280, 141, 61));
         calendarWidget = new QCalendarWidget(centralWidget);
         calendarWidget->setObjectName(QString::fromUtf8("calendarWidget"));
-        calendarWidget->setGeometry(QRect(550, 10, 301, 231));
+        calendarWidget->setGeometry(QRect(550, 10, 301, 241));
         calendarWidget->setGridVisible(true);
         calendarWidget->setSelectionMode(QCalendarWidget::SingleSelection);
         calendarWidget->setVerticalHeaderFormat(QCalendarWidget::NoVerticalHeader);
         calendarWidget->setNavigationBarVisible(true);
-        pushButton_2 = new QPushButton(centralWidget);
-        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
-        pushButton_2->setGeometry(QRect(710, 260, 141, 61));
-        pushButton_3 = new QPushButton(centralWidget);
-        pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
-        pushButton_3->setGeometry(QRect(550, 340, 301, 61));
+        pushButton_delete = new QPushButton(centralWidget);
+        pushButton_delete->setObjectName(QString::fromUtf8("pushButton_delete"));
+        pushButton_delete->setGeometry(QRect(710, 280, 141, 61));
+        pushButton_search = new QPushButton(centralWidget);
+        pushButton_search->setObjectName(QString::fromUtf8("pushButton_search"));
+        pushButton_search->setGeometry(QRect(550, 360, 301, 61));
+        listWidget = new QListWidget(centralWidget);
+        listWidget->setObjectName(QString::fromUtf8("listWidget"));
+        listWidget->setGeometry(QRect(10, 10, 510, 420));
+        QFont font;
+        font.setPointSize(12);
+        listWidget->setFont(font);
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 873, 26));
+        menuBar->setGeometry(QRect(0, 0, 870, 26));
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QString::fromUtf8("mainToolBar"));
@@ -76,9 +84,9 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        pushButton->setText(QCoreApplication::translate("MainWindow", "\346\226\260\345\273\272", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("MainWindow", "\346\211\223\345\274\200", nullptr));
-        pushButton_3->setText(QCoreApplication::translate("MainWindow", "\346\220\234\347\264\242", nullptr));
+        pushButton_new->setText(QCoreApplication::translate("MainWindow", "\346\226\260\345\273\272", nullptr));
+        pushButton_delete->setText(QCoreApplication::translate("MainWindow", "\345\210\240\351\231\244", nullptr));
+        pushButton_search->setText(QCoreApplication::translate("MainWindow", "\346\220\234\347\264\242", nullptr));
     } // retranslateUi
 
 };
