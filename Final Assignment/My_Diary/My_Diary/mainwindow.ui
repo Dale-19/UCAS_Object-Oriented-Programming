@@ -48,6 +48,9 @@
     <property name="navigationBarVisible">
      <bool>true</bool>
     </property>
+    <property name="dateEditEnabled">
+     <bool>false</bool>
+    </property>
    </widget>
    <widget class="QPushButton" name="pushButton_delete">
     <property name="geometry">

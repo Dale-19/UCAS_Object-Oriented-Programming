@@ -52,6 +52,7 @@ public:
         calendarWidget->setSelectionMode(QCalendarWidget::SingleSelection);
         calendarWidget->setVerticalHeaderFormat(QCalendarWidget::NoVerticalHeader);
         calendarWidget->setNavigationBarVisible(true);
+        calendarWidget->setDateEditEnabled(false);
         pushButton_delete = new QPushButton(centralWidget);
         pushButton_delete->setObjectName(QString::fromUtf8("pushButton_delete"));
         pushButton_delete->setGeometry(QRect(710, 280, 141, 61));

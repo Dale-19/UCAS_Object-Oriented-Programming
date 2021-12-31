@@ -1,0 +1,10 @@
+debug/editwindow.o
+debug/filemenu.o
+debug/main.o
+debug/mainwindow.o
+debug/repwindow.o
+debug/srchwindow.o
+debug/moc_editwindow.o
+debug/moc_mainwindow.o
+debug/moc_repwindow.o
+debug/moc_srchwindow.o

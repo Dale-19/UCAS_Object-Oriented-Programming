@@ -80,7 +80,6 @@ p, li { white-space: pre-wrap; }
     <addaction name="action_cut"/>
     <addaction name="action_copy"/>
     <addaction name="action_paste"/>
-    <addaction name="action_delete"/>
     <addaction name="separator"/>
     <addaction name="action_search"/>
     <addaction name="action_replace"/>
@@ -208,6 +207,9 @@ p, li { white-space: pre-wrap; }
   <action name="action_restore">
    <property name="text">
     <string>恢复</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Y</string>
    </property>
   </action>
   <action name="action_autosave">

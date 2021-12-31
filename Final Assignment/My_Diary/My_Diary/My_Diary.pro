@@ -28,16 +28,22 @@ SOURCES += \
         editwindow.cpp \
         filemenu.cpp \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
+        repwindow.cpp \
+        srchwindow.cpp
 
 HEADERS += \
         editwindow.h \
         filemenu.h \
-        mainwindow.h
+        mainwindow.h \
+        repwindow.h \
+        srchwindow.h
 
 FORMS += \
         editwindow.ui \
-        mainwindow.ui
+        mainwindow.ui \
+        repwindow.ui \
+        srchwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

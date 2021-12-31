@@ -23,8 +23,16 @@ private slots:
 
     void on_listWidget_itemDoubleClicked(QListWidgetItem *item);
 
+    void on_calendarWidget_clicked(const QDate &date);
+
+    void on_listWidget_itemClicked(QListWidgetItem *item);
+
+    void on_pushButton_search_clicked();
 
 private:
+    QString last_date;
+    QString last_file;
+
     Ui::MainWindow *ui;
 };
 

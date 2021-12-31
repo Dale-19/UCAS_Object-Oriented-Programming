@@ -125,7 +125,6 @@ public:
         menuaction_edit->addAction(action_cut);
         menuaction_edit->addAction(action_copy);
         menuaction_edit->addAction(action_paste);
-        menuaction_edit->addAction(action_delete);
         menuaction_edit->addSeparator();
         menuaction_edit->addAction(action_search);
         menuaction_edit->addAction(action_replace);
@@ -188,6 +187,9 @@ public:
         action_all->setShortcut(QCoreApplication::translate("EditWindow", "Ctrl+A", nullptr));
 #endif // QT_CONFIG(shortcut)
         action_restore->setText(QCoreApplication::translate("EditWindow", "\346\201\242\345\244\215", nullptr));
+#if QT_CONFIG(shortcut)
+        action_restore->setShortcut(QCoreApplication::translate("EditWindow", "Ctrl+Y", nullptr));
+#endif // QT_CONFIG(shortcut)
         action_autosave->setText(QCoreApplication::translate("EditWindow", "\350\207\252\345\212\250\344\277\235\345\255\230", nullptr));
         textEdit->setHtml(QCoreApplication::translate("EditWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
