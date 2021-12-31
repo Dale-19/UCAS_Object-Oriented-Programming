@@ -1,0 +1,10 @@
+release/editwindow.o
+release/filemenu.o
+release/main.o
+release/mainwindow.o
+release/repwindow.o
+release/srchwindow.o
+release/moc_editwindow.o
+release/moc_mainwindow.o
+release/moc_repwindow.o
+release/moc_srchwindow.o
